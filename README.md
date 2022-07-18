@@ -8,10 +8,11 @@ A list of useful functions for lua.
 * [filter](#filter)
 * [ternary](#ternary)
 * [split](#split)
-* [uuid](#split)
+* [uuid](#uuid)
+* [switch](#switch)
 
 <a name="forEach"></a>
-## forEach
+### forEach
 Execute a function forEach case/key from table.
 
 ```lua
@@ -33,7 +34,7 @@ forEach(myTable2, callback)
 ```
 
 <a name="map"></a>
-## map
+### map
 Create a new table with results returned from function.
 
 ```lua
