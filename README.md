@@ -78,3 +78,18 @@ local filteredTable2 = filter(myTable2, function (value, key) return value ~= tr
 print(filteredTable1[1])
 print(filteredTable2["I_Love_Books"], filteredTable2["hasName"])
 ```
+
+<a name="ternary"></a>
+### ternary
+Ternary operations with lua.
+
+```lua
+-- without ternary.lua
+local value = 20
+print(value <= 30 and "less than or equal to 30" or "more than 30")
+
+-- with ternary.lua
+local ternary = require "ternary"
+local value = 543
+print(ternary(value <= 30, "less than or equal to 30", "more than 30"))
+```
