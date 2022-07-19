@@ -1,6 +1,6 @@
 function Split(str)
   local chars = {}
-  str:gsub(".", function(c) table.insert(chars, c) end)
+  string.gsub(tostring(str), ".", function (char) table.insert(chars, char) end)
   return chars
 end
 
