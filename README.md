@@ -24,7 +24,6 @@ local myTable2 = {
     lua = true
 }
 
-
 local callback = function(value, index)
    print(value, index) 
 end
@@ -35,7 +34,7 @@ forEach(myTable2, callback)
 
 <a name="map"></a>
 ### map
-Create a new table with results returned from function.
+Create a new table from a table.
 
 ```lua
 local map = require "map"
@@ -56,5 +55,26 @@ local mappedTable2 = map(myTable2, function(value, key)
 end)
 
 print(mappedTable1[1])
-print(mappedTable2.name)
+print(mappedTable2.name, mappedTable2.years_old)
+```
+
+<a name="filter"></a>
+### filter
+Create a new table with filtered values.
+
+```lua
+local filter = require "filter"
+local myTable1 = { 30, 50, 312, 1, 24, 654, 23, 454, 53 }
+local myTable2 = {
+  hasName = true,
+  test = true,
+  I_Love_Books = false,
+  LuaIsGood = true
+}
+
+local filteredTable1 = filter(myTable1, function (value, index) return value * 2 <= 1000 end)
+local filteredTable2 = filter(myTable2, function (value, key) return value ~= true end)
+
+print(filteredTable1[1])
+print(filteredTable2["I_Love_Books"], filteredTable2["hasName"])
 ```
