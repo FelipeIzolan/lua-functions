@@ -152,3 +152,22 @@ Generate a v4 uuid.
 local uuid = require "uuid"
 print(uuid())
 ```
+
+<a name="switch"></a>
+### switch
+switch/case to lua.
+
+```lua
+local switch = require "switch"
+local week_day = os.date("%w")
+
+switch(week_day, {
+  ["1"] = function () print("Monday") end,
+  ["2"] = function () print("Tuesday") end,
+  ["3"] = function () print("Wednesday") end,
+  ["4"] = function () print("Thursday") end,
+  ["5"] = function () print("Friday") end,
+  ["6"] = function () print("Saturday") end,
+  ["7"] = function () print("Sunday") end,
+})
+```
