@@ -34,7 +34,7 @@ forEach(myTable2, callback)
 
 <a name="map"></a>
 ### map
-Create a new table from a table.
+Create a table from a table.
 
 ```lua
 local map = require "map"
@@ -94,7 +94,7 @@ print(reducedTable2 / (4 * 4) ) -- average
 
 <a name="filter"></a>
 ### filter
-Create a new table with filtered values from a table.
+Create a table with filtered values from a table.
 
 ```lua
 local filter = require "filter"
@@ -126,4 +126,20 @@ print(value <= 30 and "less than or equal to 30" or "more than 30")
 local ternary = require "ternary"
 local value = 543
 print(ternary(value <= 30, "less than or equal to 30", "more than 30"))
+```
+
+<a name="split"></a>
+### split
+*split all chars/numbers* to a table.
+
+```lua
+local split = require "split"
+local myString = "qwertyuiopasdfghjklçzxcvbnm"
+local myNumber = 1234567890
+
+local chars = split(myString)
+local numbers = split(myNumber)
+
+print(chars[math.random(1, #chars)]) -- random char
+print(numbers[math.random(1, #numbers)]) -- random number
 ```
