@@ -143,3 +143,12 @@ local numbers = split(myNumber)
 print(chars[math.random(1, #chars)]) -- random char
 print(numbers[math.random(1, #numbers)]) -- random number
 ```
+
+<a name="uuid"></a>
+### uuid
+Generate a v4 uuid.
+
+```lua
+local uuid = require "uuid"
+print(uuid())
+```
