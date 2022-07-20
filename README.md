@@ -130,7 +130,7 @@ print(ternary(value <= 30, "less than or equal to 30", "more than 30"))
 
 <a name="split"></a>
 ### split
-*split all chars/numbers* to a table.
+**split all chars/numbers** to a table.
 
 ```lua
 local split = require "split"
